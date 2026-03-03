@@ -5,10 +5,9 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  // router.get('/', controller.home.index);
-  router.prefix('/api/v1');
-  router.get('/user/info', controller.user.userInfo);
-  router.post('/user/login', controller.user.userLogin);
-  router.post('/user/register', controller.user.userRegister);
-  router.get('/wireguard/cmd', controller.wireGuard.setCMDInfo);
+  router.get('/', controller.home.index);
+  router.get('/api/v1/user/info', controller.user.userInfo);
+  router.post('/api/v1/user/login', controller.user.userLogin);
+  router.post('/api/v1/user/register', controller.user.userRegister);
+  router.get('/api/v1/wireguard/cmd', controller.wireGuard.setCMDInfo);
 };
